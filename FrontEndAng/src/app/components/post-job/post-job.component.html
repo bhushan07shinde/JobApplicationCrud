@@ -1,0 +1,44 @@
+
+
+ <div class="navbar" >
+    <h1>Job Management CRUD App</h1>
+    <a href="/">Home</a>
+</div>
+
+<div class="container">
+    <h2>Add Job</h2>
+    <form [formGroup]="postJobForm" method="post" >
+        <!-- <div class="form-group">
+            <label for="jobid">Job ID:</label>
+            <input type="number" id="jobid" name="jobid"  formControlName="jobid">
+        </div>
+         -->
+        <div class="form-group">
+            <label for="jobtitle">Title:</label>
+            <input type="text" id="jobtitle" name="jobtitle"  formControlName="title">
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills:</label>
+            <input type="text" id="skills" name="skills"  formControlName="skills">
+        </div>
+        <div class="form-group">
+            <label for="jobtype">Type:</label>
+            <input type="text" id="jobtype" name="jobtype"  formControlName="type">
+        </div>
+        <div class="form-group">
+            <label for="joblocation">Location:</label>
+            <input type="text" id="joblocation" name="joblocation"  formControlName="location">
+        </div>
+        <div class="form-group">
+            <label for="salary">Salary:</label>
+            <input type="number" id="salary" name="salary"  formControlName="salary">
+        </div>
+
+        <div class="form-group" formGroupName="companydetails">
+            <label for="companyname">Company Name:</label>
+            <input type="text" id="companyname" name="companyname" formControlName="companyname" class="form-control">
+        </div>
+        
+        <button type="submit" (click)="postJob()">Add Job</button>
+    </form>
+</div>

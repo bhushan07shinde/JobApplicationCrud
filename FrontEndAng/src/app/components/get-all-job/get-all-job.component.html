@@ -1,0 +1,51 @@
+
+
+    <div class="navbar">
+        <div class="navbar-left">
+            <h1>Job Management CRUD App</h1>
+        </div>
+        <div class="navbar-right">
+            <a href="#">Home</a>
+        </div>
+    </div>
+
+    <div class="container" >
+        <div class="buttons">
+            <button routerLink="/addjobs">Create Job</button>
+            <!-- <button>View Job</button>
+            <button>Update Job</button> -->
+            <!-- <button>Delete Job</button> -->
+        </div>
+
+        <table class="job-table">
+            <thead>
+                <tr >
+                    <th>Job Id</th>
+                    <th>Title</th>
+                    <th>Skills</th>
+                    <th>Type</th>
+                    <th>Location</th>
+                    <th>Salary</th>
+                    <th>Company ID</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr *ngFor="let job of jobarray">
+                    <td>{{job.jobId}}</td>
+                    <td>{{job.title}}</td>
+                    <td>{{job.skills}}</td>
+                    <td>{{job.type}}</td>
+                    <td>{{job.location}}</td>
+                    <td>{{job.salary}}</td>
+                    <td>{{job.companydetails.companyname}}</td>
+                    <td><button class="btn" id="del" (click)="deleteJob(job.jobId)">Delete</button> 
+                        <button class="btn" routerLink="addjobs/{{job.jobId}}">Update</button>
+                         <button class="btn" routerLink="view/{{job.jobId}}">View</button></td>
+                </tr>
+               
+            </tbody>
+        </table>
+    </div>
+

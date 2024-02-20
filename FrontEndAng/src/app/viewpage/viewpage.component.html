@@ -1,0 +1,46 @@
+
+
+<div class="navbar" >
+    <h1>Job Management CRUD App</h1>
+    <a href="/">Home</a>
+</div>
+
+
+<div   class="container" *ngIf=" jobarray">
+    <h2>{{jobarray.title}}</h2>
+    <h1>******</h1>
+   
+    <div class="form-group">
+      <label>Job Type:</label>
+      <span>{{jobarray.type}}</span>
+      
+    </div>
+    
+
+    <div class="form-group">
+      <label>Skills:</label>
+      <span>{{ jobarray.skills }}</span>
+    </div>
+   
+    <div class="form-group">
+      <label>Location:</label>
+      <span>{{ jobarray.location}}</span>
+    </div>
+    <div class="form-group">
+      <label>Salary:</label>
+      <span>{{ jobarray.salary }}</span>
+    </div>
+    <div class="form-group">
+      <label>Company:</label>
+      <span>{{jobarray.companydetails?.companyname}}</span>
+    </div>
+   
+    
+</div>
+
+<div class="center-button">
+  <button (click)="goBack()">Back</button>
+</div>
+
+
+  
