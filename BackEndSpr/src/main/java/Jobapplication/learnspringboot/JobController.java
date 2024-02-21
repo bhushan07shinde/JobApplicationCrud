@@ -71,6 +71,6 @@ public class JobController {
 	public void deleteJob(@PathVariable int id) {
 		
 		jobservice.deleteJob(id);
-		// Logic to delete the job
+		
 	}
 }
